@@ -3,6 +3,9 @@
 
 #include <iostream>
 #include <string>
+#include <cstdlib>
+#include <cmath>
+#include <limits>
 
 class ScalarConverter {
 private:
@@ -23,6 +26,12 @@ private:
 
 	static LiteralType detectType(const std::string& s);
 	static LiteralType detectNumType(const std::string& s);
+	static double parseToDouble(const std::string& s, LiteralType type);
+	static void printChar(double d);
+	static void printInt(double d);
+	static void printFloat(double d, LiteralType type);
+	static void printDouble(double d, LiteralType type);
+	static bool isPrintableAscii(char c);
 
 public:
 	static void convert(const std::string& s);
