@@ -6,6 +6,7 @@
 #include <cstdlib>
 #include <cmath>
 #include <limits>
+#include <iomanip>
 
 class ScalarConverter {
 private:
@@ -14,8 +15,6 @@ private:
 		INT, // -42, 0, 42
 		FLOAT, // 42.0f
 		DOUBLE, // 42.0
-		PSEUDO_FLOAT, // nanf, +inff, -inff
-		PSEUDO_DOUBLE, // nan, +inf, -inf
 		INVALID
 	};
 
@@ -26,12 +25,20 @@ private:
 
 	static LiteralType detectType(const std::string& s);
 	static LiteralType detectNumType(const std::string& s);
-	static double parseToDouble(const std::string& s, LiteralType type);
-	static void printChar(double d);
-	static void printInt(double d);
-	static void printFloat(double d, LiteralType type);
-	static void printDouble(double d, LiteralType type);
-	static bool isPrintableAscii(char c);
+	static char convertToChar(const std::string& s);
+	static int convertToInt(const std::string& s);
+	static float convertToFloat(const std::string& s);
+	static double convertToDouble(const std::string& s);
+	static void printAll(char c);
+	static void printAll(int i);
+	static void printAll(float f);
+	static void printAll(double d);
+
+	static void printCharFromDouble(double d);
+	static void printIntFromDouble(double d);
+	static void printFloat(float f);
+	static void printDouble(double d);
+	static bool isDisplayable(char c);
 
 public:
 	static void convert(const std::string& s);
