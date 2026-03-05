@@ -1,6 +1,7 @@
 #ifndef SERIALIZER_HPP
 #define SERIALIZER_HPP
 
+#include <iostream>
 #include <stdint.h>
 
 typedef struct {

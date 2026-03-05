@@ -5,7 +5,7 @@ BUILD_DIR = build
 CC = c++
 CFLAGS = -std=c++98 -Wall -Wextra -Werror
 
-SRCS = main.cpp Serialize.cpp
+SRCS = main.cpp Serializer.cpp
 OBJS = $(addprefix $(BUILD_DIR)/, $(notdir $(SRCS:.cpp=.o)))
 
 RM = rm -f
