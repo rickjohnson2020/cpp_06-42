@@ -3,11 +3,7 @@
 
 #include <iostream>
 #include <stdint.h>
-
-typedef struct {
-	int x;
-	int y;
-} Data;
+#include "./Data.hpp"
 
 class Serializer {
 private:
