@@ -185,7 +185,7 @@ void ScalarConverter::printFloat(float f) {
 		std::cout << (f > 0 ? "+inff" : "-inff") << std::endl;
 		return;
 	}
-	if (f == (int)f)
+	if (f == static_cast<int>(f))
 		std::cout << std::fixed << std::setprecision(1) << f << "f" << std::endl;
 	else
 		std::cout << f << "f" << std::endl;
@@ -201,7 +201,7 @@ void ScalarConverter::printDouble(double d) {
 		std::cout << (d > 0 ? "+inf" : "-inf") << std::endl;
 		return;
 	}
-	if (d == (int)d)
+	if (d == static_cast<int>(d))
 		std::cout << std::fixed << std::setprecision(1) << d << std::endl;
 	else
 		std::cout << d << std::endl;
