@@ -1,4 +1,4 @@
-NAME = generate
+NAME = identify
 
 BUILD_DIR = build
 
