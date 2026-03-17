@@ -1,9 +1,9 @@
 #ifndef DATA_HPP
 #define DATA_HPP
 
-typedef struct {
+struct Data {
 	int x;
 	int y;
-} Data;
+};
 
 #endif
